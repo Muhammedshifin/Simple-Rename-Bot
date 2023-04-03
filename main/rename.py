@@ -1,7 +1,7 @@
 import time
 import os
 from pyrogram import Client, filters, enums
-from config import temp, CAPTION, ADMIN
+from config import temp, CAPTION, ADMIN, log_chat
 from main.utils import progress_message, humanbytes
 from userbot import User
 
