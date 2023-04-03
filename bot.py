@@ -40,7 +40,9 @@ class Bot(Client):
        bind_address = "0.0.0.0"
        await webserver.TCPSite(client, bind_address, PORT_CODE).start()
 
-apps = [User,Bot]
+apps = [User]
 for app in apps:
     app.start()    
     
+bot = Bot()
+bot.run()
