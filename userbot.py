@@ -14,6 +14,3 @@ User = Client(name="user-account",
               workers=300
               )
 
-User.start()
-print("User Started!")
-
