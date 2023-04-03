@@ -2,7 +2,7 @@ from pyrogram import Client
 from config import *
 from route import web_server
 from aiohttp import web
-
+from userbot import User
 from main.webcode import bot_run
 from os import environ
 from aiohttp import web as webserver
@@ -40,5 +40,6 @@ class Bot(Client):
        bind_address = "0.0.0.0"
        await webserver.TCPSite(client, bind_address, PORT_CODE).start()
 
-bot = Bot()
-bot.run()
+apps = [User,bot]
+app.start()    
+    
