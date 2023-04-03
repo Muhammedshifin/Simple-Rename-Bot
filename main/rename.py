@@ -3,6 +3,7 @@ import os
 from pyrogram import Client, filters, enums
 from config import temp, CAPTION, ADMIN
 from main.utils import progress_message, humanbytes
+from userbot import User
 
 @Client.on_message(filters.private & filters.command("rename") & filters.user(ADMIN))             
 async def rename_file(bot, msg):
