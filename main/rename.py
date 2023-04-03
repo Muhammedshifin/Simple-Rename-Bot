@@ -35,7 +35,11 @@ async def rename_file(bot, msg):
     await sts.edit("Trying to Uploading")
     c_time = time.time()
     try:
-        await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))        
+        filw = await User.send_document(log_chat, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))    
+        from_chat = filw.chat.id
+        #gige😑 
+        mg_id = filw.id
+        await bot.copy_message(msg.from_user.id,from_chat,mg_id)
     except Exception as e:  
         await sts.edit(f"Error {e}") 
         return               
