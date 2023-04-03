@@ -17,7 +17,3 @@ User = Client(name="user-account",
 User.start()
 print("User Started!")
 
-idle()
-
-User.stop()
-print("User Stopped!")
