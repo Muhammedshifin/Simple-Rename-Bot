@@ -4,7 +4,7 @@ from pyrogram import Client, filters, enums
 from config import temp, CAPTION, ADMIN, log_chat
 from main.utils import progress_message, humanbytes
 from userbot import User
-import humanize
+
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
