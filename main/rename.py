@@ -4,6 +4,14 @@ from pyrogram import Client, filters, enums
 from config import temp, CAPTION, ADMIN, log_chat
 from main.utils import progress_message, humanbytes
 from userbot import User
+import humanize
+
+@Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
+async def send_doc(client,message):
+    media = await client.get_messages(message.chat.id,message.id)
+		file = media.document or media.video or media.audio 
+    filename = file.file_name
+    
 
 @Client.on_message(filters.private & filters.command("rename") & filters.user(ADMIN))             
 async def rename_file(bot, msg):
