@@ -52,7 +52,7 @@ async def rename_file(bot, msg):
             mg_id = filw.id
             await bot.copy_message(msg.from_user.id,from_chat,mg_id)  
         else:   
-             bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))        
+            await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))        
    
     except Exception as e:  
         await sts.edit(f"Error {e}") 
