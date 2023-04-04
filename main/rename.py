@@ -4,7 +4,7 @@ from pyrogram import Client, filters, enums
 from config import temp, CAPTION, ADMIN, log_chat
 from main.utils import progress_message, humanbytes
 from userbot import User
-
+import humanize
 
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
@@ -44,11 +44,17 @@ async def rename_file(bot, msg):
     await sts.edit("Trying to Uploading")
     c_time = time.time()
     try:
-        filw = await User.send_document(log_chat, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))    
-        from_chat = filw.chat.id
-        #gige😑 
-        mg_id = filw.id
-        await bot.copy_message(msg.from_user.id,from_chat,mg_id)
+        value = 2090000000
+        if value < file.file_size:
+            filw = await User.send_document(log_chat, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))    
+            from_chat = filw.chat.id
+            #gige😑 
+            mg_id = filw.id
+            await bot.copy_message(msg.from_user.id,from_chat,mg_id)
+        else:
+            
+            await bot.send_document(msg.chat.id, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))        
+
     except Exception as e:  
         await sts.edit(f"Error {e}") 
         return               
