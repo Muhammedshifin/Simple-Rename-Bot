@@ -1,3 +1,4 @@
 pyrogram
 Tgcrypto
 aiohttp==3.8.3
+humanize
