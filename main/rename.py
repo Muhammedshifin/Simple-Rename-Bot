@@ -45,7 +45,7 @@ async def rename_file(bot, msg):
     c_time = time.time()
     try:
         master = 2090000000
-        If int(master) < int(filesize):  
+        if int(master) < int(filesize):  
             filw = await User.send_document(log_chat, document=downloaded, thumb=og_thumbnail, caption=cap, progress=progress_message, progress_args=("Uploade Started.....", sts, c_time))    
             from_chat = filw.chat.id
             #gige😑 
