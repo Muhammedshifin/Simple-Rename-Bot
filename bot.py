@@ -30,7 +30,7 @@ class Bot(Client):
         port = "8080"
         await web.TCPSite(app, bind_address, port).start()   
         print(f"{me.first_name} | @{me.username} 𝚂𝚃𝙰𝚁𝚃𝙴𝙳...⚡️")
-        await self.send_message(text="Rename Started.. 🔥")
+        await self.send_message(text="Rename Started.. 🔥", chat_id=log_chat)
 
     async def stop(self, *args):
        await super().stop()      
