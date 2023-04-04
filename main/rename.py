@@ -9,8 +9,9 @@ import humanize
 @Client.on_message(filters.private &( filters.document | filters.audio | filters.video ))
 async def send_doc(client,message):
     media = await client.get_messages(message.chat.id,message.id)
-		file = media.document or media.video or media.audio 
+    file = media.document or media.video or media.audio 
     filename = file.file_name
+    await message.reply_text(f"Reply To This Message Like This🔥\n\n <code>/rename {filename}</code>")
     
 
 @Client.on_message(filters.private & filters.command("rename") & filters.user(ADMIN))             
