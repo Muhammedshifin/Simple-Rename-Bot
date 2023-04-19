@@ -4,7 +4,7 @@ from config import *
 
 API_ID = int(environ.get('API_ID', "18302370"))
 API_HASH = environ.get('API_HASH', "03c2cced4dea9b1e96dce87558dd2381")
-SESSION = environ.get('SESSION', "BQCjLnL8egVI1vOcV0GE8JfJPMYSHIWWSXjl1V2d8JPhkQIXPuCis4xek4hhOaK3FBLB9d1XUkcjgzdoImdcekCLarcWkdqXnLuYlW4KKAd8YL9xYBDt3y9FQFLD5MlHKyIWUsfMOWo8TRhoovJ_SF17G-egyPtvW_1L65gcp-Uz1l3dn2Ac4cZ3dl6hX5-RZkOz_iEharA8nVyjFWy5hPPoA8RTmc4kSi1PjF701HKP2OgMWV3uBRsl-D3BD-NXzmzbcY8FlPRol1inPbN-vWy9lTM5Yg7hqtJvO3dL9wHEVhOVJMOY48XsBOtMjB7C63jo--HBlYyTWYL1AmRYJcjaAAAAAU2Yx_4A")
+SESSION = environ.get('SESSION', "BQAcUG3cdKOCZ_u28YDsK057xGPtV1DfkD5_B3oTDgJcPrDH2tkxcFLdoh8zaFQqy81scqWFl6nVnZgR_zmbl11u1wYKvLXFr8w7sxEWvi-bk7o0ZH38sGvuljMOGBetcKpsLq6P09KxJhhGHDE7h-SBtpM6RWfhDGttzjlHlW0lokOmQIf3wCtyojgeYLTvLKQ9pNHakViwSfjSF7xaz6SudbSbUY7hdsjv2Lg0coOQUMf06Jn6P5yTfxCzXu_i7g-At_SJgKQl9pWduMZ6lKpwpyLnEuxYfDdxmufs3LV0qNHITEF0LZ1VpeR4xEgJBn88CnbNehivfFeEEbhOiwA0AAAAAXOcqTkA")
 
 User = Client(name="user-account",
               session_string=SESSION,
